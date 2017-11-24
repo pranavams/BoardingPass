@@ -1,0 +1,16 @@
+.DS_Store
+**/*/.DS_Store
+.get
+build
+.gradle
+/bin
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.idea
+target
+out
+.settings
+*.log*
