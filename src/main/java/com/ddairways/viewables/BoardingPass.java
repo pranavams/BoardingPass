@@ -21,7 +21,7 @@ public class BoardingPass {
 		this.ticketInfo =  ticketInfo;
 	}
 
-	public void generateBoardingPass(Channel channel) throws Exception {
+	public void generate(Channel channel) throws Exception {
 		Writer writer = Writer.None;
 		switch (channel) {
 		case AIRPORT_COUNTER:

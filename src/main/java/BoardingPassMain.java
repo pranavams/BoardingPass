@@ -19,14 +19,14 @@ public class BoardingPassMain {
 		TravelTicket ticketInfo = TravelTicket.builder().flight(flight).passenger(passenger).pnr(pnr).seat(seat)
 				.seqNo(seqNo).build();
 		BoardingPass boardingPass = BoardingPass.checkin(ticketInfo);
-		boardingPass.generateBoardingPass(Channel.DESKTOP);
-		boardingPass.generateBoardingPass(Channel.MOBILE);
+		boardingPass.generate(Channel.DESKTOP);
+		boardingPass.generate(Channel.MOBILE);
 
 		// Kiosk and Counter boarding passes have gate information
 		final String gate = "45C";
 		boardingPass = BoardingPass.checkin(new TravelTicket(flight, passenger, pnr, seat, seqNo, gate));
-		boardingPass.generateBoardingPass(Channel.AIRPORT_COUNTER);
-		boardingPass.generateBoardingPass(Channel.KIOSK);
+		boardingPass.generate(Channel.AIRPORT_COUNTER);
+		boardingPass.generate(Channel.KIOSK);
 	}
 
 }
